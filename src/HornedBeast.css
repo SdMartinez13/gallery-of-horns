@@ -1,0 +1,40 @@
+article {
+  border: 1px solid rgb(216, 214, 214);
+  padding: 1vw;
+  margin-bottom: 1vw;
+  width: 16%;
+  justify-content: space-between;
+  background-color: #c0e5e5;
+  
+}
+article img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 1px solid lightgrey;
+  
+}
+article p {
+  font-size: 11px;
+  margin: auto;
+  display: inline-block;
+  margin-bottom: .5rem;
+  
+}
+article p:last-of-type {
+  padding-left: 1rem;
+  cursor: pointer;
+}
+article p:last-of-type:hover {
+  color: red;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+
+
