@@ -21,3 +21,29 @@
 **Actual time needed to complete:**
 
 * 4 1/2 hours
+
+## Time Estimate Lab 03
+
+**Number and name of features:**
+
+* Import the data.json file into your App component and send that data into the Main component/
+Map over the JSON data in your Main component to render each beast/
+Send a function into your Main component that allows the user to update state in the App/
+Create a SelectedBeast component and include it in your App/
+Use the state in the App to render an individual beast in a Modal in the SelectedBeast component using React Bootstrap
+
+**Estimate of time needed to complete:**
+
+* 1hr/1hr/1hr/1hr/1hr
+
+**Start Time:**
+
+* 1400hrs
+
+**Finish Time:**
+
+* 2130hrs
+
+**Actual time needed to complete:**
+
+* 7 1/2 hours

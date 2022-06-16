@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button } from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
+import {Card} from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
 import './HornedBeast.css'
 
 class HornedBeast extends React.Component {
@@ -10,33 +12,69 @@ class HornedBeast extends React.Component {
     };
   };
 
-handleFaves = () => {
-  this.setState({
+  handleFaves = () => {
+    this.setState({
 
-      faves: this.state.faves + 1,
-      
-  });
-};
+        faves: this.state.faves + 1,
+        
+    });
+  };
 
   render() {
     return (
-      <article>
-        <>
-        <h2>{this.props.title}</h2>
-        <p>{this.props.description}</p>
-        <p>❤️ {this.state.faves} Favorites</p>
-        {/* <p onClick={this.handleFaves}>Click here to make your favorite</p> */}
+      <Col className="mt-4">
+        <Card style={{width: '18rem'}} className="h-100 p-3 card-container">
+
+          <Card.Title>
+            {this.props.title}
+          </Card.Title>
+
+          <Card.Text>
+            {this.state.faves} ❤️ Favorites
+          </Card.Text>
+
+          <Card.Img 
+            className="card-image"
+            variant='top' 
+            style={{cursor:'pointer'}} 
+            src={this.props.imageUrl} 
+            alt={this.props.description} 
+            title={this.props.title}
+            onClick={()=> {this.props.openModal(this.props.beast)}}
+          />
+          <Button className="mt-3" variant="primary" onClick={this.handleFaves}>Favorite!</Button>
+
+          <Card.Body>
+
+
+
+          <Card.Text>
+            {this.props.description}
+          </Card.Text>
+
+
+        </Card.Body>
+
+        </Card>
+      </Col>
+      // <article>
+      //   <>
+      //   <h2>{this.props.title}</h2>
+      //   <p>{this.props.description}</p>
+      //   <p>❤️ {this.state.faves} Favorites</p>
+      //   {/* <p onClick={this.handleFaves}>Click here to make your favorite</p> */}
           
-        <img 
-          src={this.props.imageUrl} 
-          alt={this.props.description} 
-          title={this.props.title}/>
+      //   <img 
+      //     src={this.props.imageUrl} 
+      //     alt={this.props.description} 
+      //     title={this.props.title}
+      //     onClick={()=> {this.props.openModal(this.props.beast)}}/>
         
-          <Button variant="outline-primary" onClick={this.handleFaves}>Click Here!</Button>
+      //     <Button variant="outline-primary" onClick={this.handleFaves}>Click Here!</Button>
 
         
-      </>
-      </article>
+      // </>
+      // </article>
     );
   }
 }
