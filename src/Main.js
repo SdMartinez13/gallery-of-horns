@@ -1,16 +1,18 @@
 import React from 'react';
 import HornedBeast from './HornedBeast.js';
-import data from './data.json'
+// import data from './data.json'
 // import App from './App.js';
 
 class Main extends React.Component {
   render() {
-    let beasts = data.map((beast, index) => {
+    let beasts = this.props.data.map((beast, index) => {
       
        return <HornedBeast
         title={beast.title}
         imageUrl={beast.image_url}
         description={beast.description}
+        openModal ={this.props.openModal}
+        beast = {beast}
         key={index}
         />
       
@@ -18,7 +20,7 @@ class Main extends React.Component {
     
     return (
       
-      <main>
+      <main className="d-flex flex-wrap">
 
         {beasts}
         
